@@ -5,7 +5,7 @@ const logger = require(`morgan`);
 const mongoose = require(`mongoose`);
 const htmlR = require(`./routes/views`);
 const apiR = require(`./routes/api`);
-const PORT = process.env.PORT || 3023;
+const PORT = process.env.PORT || 3088;
 const app = express();
 
 app.use(logger(`dev`));
