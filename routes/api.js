@@ -24,8 +24,8 @@ module.exports = app => {
 
   app.post(`/api/workouts`, (req, res) => {
     db.Workout.create({})
-      .then(addWorkout => {
-        res.json(addWorkout);
+      .then(addExercise => {
+        res.json(addExercise);
       })
       .catch(err => {
         res.json(err);
@@ -37,8 +37,8 @@ module.exports = app => {
       { _id: req.params.id },
       { $push: { exercises: req.body } }
     )
-      .then(addToWorkout => {
-        res.json(addToWorkout);
+      .then(addToExercise => {
+        res.json(addToExercise);
       })
       .catch(err => {
         res.json(err);
